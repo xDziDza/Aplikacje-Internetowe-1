@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#searchBar{
+    width: 100%;
+}
+
+#searchBar svg{
+    width: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#searchBar input{
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#card{
+    background: #F5F5F5;
+    width: 50%;
+    display: grid;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 2em;
+}
+
+#addBtn{
+    float: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+#addSpan *{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.task{
+    margin: 1em;
+    background: #666;
+}
+
+.task svg{
+    width: 20px;
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
