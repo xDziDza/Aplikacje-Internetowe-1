@@ -2,28 +2,50 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background: #AFEEEE;
 }
 
-#searchBar{
-    width: 100%;
+h1{
+    text-align: center;
+}
+#searchBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 25px;
 }
 
-#searchBar svg{
+#searchBar svg {
     width: 20px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 20px;
+    fill: #888;
 }
 
-#searchBar input{
-    width: 80%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+#site-search {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: transparent;
 }
+
+#site-search::placeholder {
+    color: #aaa;
+}
+
+#searchBar:focus-within {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 #card{
-    background: #F5F5F5;
+    background: #fff;
     width: 50%;
     display: grid;
     padding: 2em;
@@ -33,22 +55,66 @@ body{
     margin-top: 2em;
 }
 
-#addBtn{
-    float: right;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    border-radius: 1em;
+#addSpan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
 }
 
-#addSpan *{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+#addSpan input[type="text"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 350px;
 }
-.task{
-    margin: 1em;
-    background: #666;
+
+#addSpan input[type="date"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
 }
+
+#addBtn {
+    background-color: #00d26a;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+#addBtn:hover {
+    background-color: #45a049;
+}
+
+.task {
+    display: block;
+    background-color: #f2f2f2;
+    padding: 12px 16px;
+    border-radius: 8px;
+
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.task::before {
+    content: "📌 ";
+    font-size: 18px;
+    margin-right: 4px;
+}
+
 
 .task svg{
     width: 20px;
