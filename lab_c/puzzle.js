@@ -34,8 +34,28 @@ document.addEventListener("DOMContentLoaded", function() {
             img.width = dimensions.x;
             img.height = dimensions.y;
             img.src = canvas.toDataURL();
-            document.getElementById('images').innerHTML = '';
-            document.getElementById('images').appendChild(img);
+            //document.getElementById('image').innerHTML = '';
+
+            const container = document.querySelector('.image-container');
+            const rows = 4;
+            const cols = 4;
+            const imageUrl = img.src; // Zmień na odpowiednią ścieżkę
+            const puzzleHeight = document.getElementById('map').height/4;
+            const puzzleWidth = document.getElementById('map').width/4;
+
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    const part = document.createElement('div');
+                    part.classList.add('image-part');
+                    part.style.backgroundImage = `url('${imageUrl}')`;
+                    part.style.backgroundSize = `${puzzleHeight-5}px ${puzzleWidth-5}px`; // Dostosuj do wymiarów zdjęcia
+                    part.style.backgroundPosition = `${-col * 100}% ${-row * 100}%`;
+                    part.draggable = true;
+                    container.appendChild(part);
+                }
+            }
+
+            //document.getElementById('images').appendChild(img);
         });
     });
 });
