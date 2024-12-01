@@ -1,2 +1,2 @@
 let mix = require('laravel-mix');
-mix.ts('dist/script.ts', 'dist').setPublicPath('dist');
+mix.ts('script.ts', 'dist').setPublicPath('dist');
