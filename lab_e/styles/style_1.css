@@ -1,0 +1,141 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 100%);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 100%);
+    padding: 10px;
+}
+
+#menu a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#main_pic {
+    text-align: center;
+}
+
+#main_pic img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+#visitor-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#visitor-text h1 {
+    font-size: 2em;
+}
+
+#visitor-text a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#visitor-text a:hover {
+    background-color: #cc0000;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 1000px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.card div {
+    padding: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card ul li a {
+    color: #ff0000;
+}
+
+footer {
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #visitor-text h1 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #visitor-text h1 {
+        font-size: 1.2em;
+    }
+
+    #visitor-text a {
+        padding: 8px 16px;
+    }
+
+    .card div {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+}
